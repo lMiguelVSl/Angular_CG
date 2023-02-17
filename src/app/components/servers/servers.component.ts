@@ -7,10 +7,16 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
 
-  allowSetButton: boolean = false;
+  serverStatus: string = 'Server was not created!';
+  allowSetButton: boolean = true;
+
   constructor() {
     setTimeout(() => {
-      this.allowSetButton = true;
+      this.allowSetButton = false;
     }, 2000);
+  }
+
+  onAddServerClick() {
+    this.serverStatus = 'Server created';
   }
 }
