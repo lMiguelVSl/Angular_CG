@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
 
+  allowSetButton: boolean = false;
+  constructor() {
+    setTimeout(() => {
+      this.allowSetButton = true;
+    }, 2000);
+  }
 }
