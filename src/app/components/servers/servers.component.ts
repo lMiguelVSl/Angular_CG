@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
 
+  serverName: string = 'Default Name';
   serverStatus: string = 'Server was not created!';
   allowSetButton: boolean = true;
 
@@ -18,5 +19,9 @@ export class ServersComponent {
 
   onAddServerClick() {
     this.serverStatus = 'Server created';
+  }
+
+  onUpdateServerName(event: any) {
+    this.serverName = event.target.value;
   }
 }

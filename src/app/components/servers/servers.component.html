@@ -1,2 +1,8 @@
-<button class="btn btn-primary" [disabled]="allowSetButton" (click)="onAddServerClick()">Add Server</button>
+<h3>Server Name: {{serverName}}</h3>
+<input type="text" placeholder="Type a new server name" class="form-control" (input)="onUpdateServerName($event)">
+
+<br>
+<br>
+
 <p>{{serverStatus}}</p>
+<button class="btn btn-primary" [disabled]="allowSetButton" (click)="onAddServerClick()">Add Server</button>
