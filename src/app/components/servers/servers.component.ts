@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class ServersComponent {
 
   serverName: string = 'Default Name';
-  serverStatus: string = 'Server was not created!';
   allowSetButton: boolean = true;
+  serverCreated: boolean = false;
 
   constructor() {
     setTimeout(() => {
@@ -18,7 +18,7 @@ export class ServersComponent {
   }
 
   onAddServerClick() {
-    this.serverStatus = 'Server created. Name: ' + this.serverName;
+    this.serverCreated = true;
   }
 
   onUpdateServerName(event: any) {
