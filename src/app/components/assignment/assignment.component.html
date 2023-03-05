@@ -1,3 +1,4 @@
-<input type="text" placeholder="Type user name" class="form-control" (input)="onUpdateServerName($event)">
+<input type="text" id="userNameInput" placeholder="Type user name" class="form-control"
+    (input)="onUpdateServerName($event)" [(ngModel)]="inputValue">
 <button class="btn btn-primary" [disabled]="allowSetButton" (click)="onResetUserName()">Reset user name</button>
 <h3>user name: {{userName}}</h3>
