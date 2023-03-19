@@ -2,8 +2,9 @@
 <input type="text" placeholder="Type a new server name" class="form-control" (input)="onUpdateServerName($event)">
 
 <br>
-<br>
+
+<button class="btn btn-primary" [disabled]="allowSetButton" (click)="onAddServerClick()">Add Server</button>
 
 <p *ngIf="serverCreated">Server created, server name: {{serverName}}</p>
+<app-server *ngFor="let server of servers" [serverName]="server"></app-server>
 <p *ngIf="!serverCreated">No server created</p>
-<button class="btn btn-primary" [disabled]="allowSetButton" (click)="onAddServerClick()">Add Server</button>

@@ -10,6 +10,7 @@ export class ServersComponent {
   serverName: string = 'Default Name';
   allowSetButton: boolean = true;
   serverCreated: boolean = false;
+  servers: string[] = ['server 001', 'server 002'];
 
   constructor() {
     setTimeout(() => {
@@ -19,6 +20,7 @@ export class ServersComponent {
 
   onAddServerClick() {
     this.serverCreated = true;
+    this.servers.push(this.serverName);
   }
 
   onUpdateServerName(event: any) {
